@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *valueOne;
+@property (weak, nonatomic) IBOutlet UITextField *valueTwo;
+@property (weak, nonatomic) IBOutlet UIButton *calculateButton;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBarActual;
 
 @end
 
@@ -22,6 +26,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)calculateButtonPressed:(id)sender {
+    NSLog(@"Here I go");
 }
 
 @end
