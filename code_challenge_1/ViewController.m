@@ -12,7 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *valueOne;
 @property (weak, nonatomic) IBOutlet UITextField *valueTwo;
 @property (weak, nonatomic) IBOutlet UIButton *calculateButton;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navBarActual;
 
 @end
 
@@ -20,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.topItem.title = @"toasty";
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,7 +28,9 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)calculateButtonPressed:(id)sender {
-    NSLog(@"Here I go");
+    int sumValue = (self.valueOne.text.intValue * self.valueTwo.text.intValue);
+    self.navigationController.navigationBar.topItem.title = ;
+    NSLog(@"%i", sumValue);
 }
 
 @end
